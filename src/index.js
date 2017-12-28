@@ -4,7 +4,7 @@ import async from 'async';
 import hash from 'object-hash';
 
 class IgnoreUnchangedFilesPlugin {
-  static apply(compiler) {
+  apply(compiler) {
     compiler.plugin('emit', (compilation, callback) => {
       const {
         assets,
