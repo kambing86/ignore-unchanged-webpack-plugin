@@ -17,8 +17,16 @@ class IgnoreUnchangedFilesPlugin {
           content = new Buffer(content, 'utf8');
         }
         fs.readFile(path.join(compilation.outputOptions.path, file), (err, data) => {
-          if (hash(data) === hash(content)) {
-            delete assets[file];
+          if (err) {
+            cb();
+            return;
+          }
+          try {
+            if (hash(data) === hash(content)) {
+              delete assets[file];
+            }
+          } catch (e) {
+            console.error(e);
           }
           cb();
         });
