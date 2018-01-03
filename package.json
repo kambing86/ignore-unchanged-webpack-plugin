@@ -23,6 +23,8 @@
     "webpack-defaults": "webpack-defaults"
   },
   "author": "Chua Kang Ming",
+  "url": "https://github.com/kambing86/ignore-unchanged-webpack-plugin",
+  "email": "kambing860210@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
