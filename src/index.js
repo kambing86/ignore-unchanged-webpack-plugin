@@ -5,7 +5,7 @@ import hash from 'object-hash';
 
 class IgnoreUnchangedFilesPlugin {
   apply(compiler) {
-    compiler.plugin('emit', (compilation, callback) => {
+    const onEmit = (compilation, callback) => {
       const {
         assets,
       } = compilation;
@@ -31,7 +31,13 @@ class IgnoreUnchangedFilesPlugin {
           cb();
         });
       }, callback);
-    });
+    };
+
+    if (compiler.hooks) {
+      compiler.hooks.emit.tapAsync('ignore-unchanged-webpack-plugin', onEmit);
+    } else {
+      compiler.plugin('emit', onEmit);
+    }
   }
 }
 
