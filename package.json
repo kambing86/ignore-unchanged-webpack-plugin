@@ -1,6 +1,6 @@
 {
   "name": "ignore-unchanged-webpack-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Webpack plugin to not emitting unchanged files to the output path",
   "main": "dist/cjs.js",
   "scripts": {
