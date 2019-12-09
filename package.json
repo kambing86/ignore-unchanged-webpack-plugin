@@ -1,6 +1,6 @@
 {
   "name": "ignore-unchanged-webpack-plugin",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Webpack plugin to not emitting unchanged files to the output path",
   "license": "ISC",
   "repository": "kambing86/ignore-unchanged-webpack-plugin",
