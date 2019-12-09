@@ -31,7 +31,7 @@ Overwriting the unchanged files will change the file modification time and can b
 **webpack.config.js**
 
 ```js
-const IgnoreUnchangedFilesPlugin = require("ignore-unchanged-webpack-plugin");
+const IgnoreUnchangedFilesPlugin = require('ignore-unchanged-webpack-plugin');
 
 module.exports = {
   module: {
@@ -39,16 +39,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader"
-        })
-      }
-    ]
+          fallback: 'style-loader',
+          use: 'css-loader',
+        }),
+      },
+    ],
   },
-  plugins: [
-    new IgnoreUnchangedFilesPlugin(),
-  ]
-}
+  plugins: [new IgnoreUnchangedFilesPlugin()],
+};
 ```
 
 <h2 align="center">Maintainers</h2>
